@@ -66,14 +66,53 @@
         <div class="section-nav">
 			<div class = "container">
 			   <div class="row">
-					<div class="col-sm-12 col-lg-8">
-						<form>
-							<span> Name </span>
-							<input type="text" value="" placeholder="Firstname"/>
-							<input type="text" value="" placeholder="Surname" />
-							<span> Gender </span>
-							
-						</form>
+					
+					<div id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="card">
+						<div class="card-header" role="tab" id="headingOne">
+						  <h5 class="mb-0">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							  - Personal Section
+							</a>
+						  </h5>
+						</div>
+
+						<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+						  <div class="card-block">
+							form questions
+						  </div>
+						</div>
+					  </div>
+					  <div class="card">
+						<div class="card-header" role="tab" id="headingTwo">
+						  <h5 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							- Emergency Contact:
+							</a>
+						  </h5>
+						</div>
+						<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+						  <div class="card-block">
+							emergency questions
+						  </div>
+						</div>
+					  </div>
+					  <div class="card">
+						<div class="card-header" role="tab" id="headingThree">
+						  <h5 class="mb-0">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							  - Doctor/GP Information (optional)
+							</a>
+						  </h5>
+						</div>
+						<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+						  <div class="card-block">
+							General GP
+						  </div>
+						</div>
+					  </div>
+					</div>
+					
 					</div>
 				</div>
 			</div>
