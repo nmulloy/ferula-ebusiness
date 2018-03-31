@@ -243,15 +243,9 @@
 <fieldset>
   <legend>Chronic Disease Assessment:</legend>
   <div>
-	  <label for="yes_no_hasAsthma">Do you suffer from asthma?</label>
+	  <label for="yes_no_asthmaType">Do you suffer from asthma, if so which type?</label>
 	  <p>
-	  <input type="radio" name="yes_noAsthma">Yes</input>
-	  <input type="radio" name="yes_noAsthma">No</input>
-	  </p>
-  </div>
-  <div>
-	  <label for="yes_no_asthmaType">If yes to the above question, please tick the box below which best describes it</label>
-	  <p>
+	  <input type="radio" name="yes_noasthmaType">No Asthma</input>
 	  <input type="radio" name="yes_noasthmaType">Intermittent</input>
 	  <input type="radio" name="yes_noasthmaType">Mild</input>
 	  <input type="radio" name="yes_noasthmaType">Persistent</input>
@@ -261,15 +255,9 @@
 	  </p>
   </div>
   <div>
-	  <label for="yes_no_hasDiabetes">Do you have diabetes?</label>
+	  <label for="type_of_Diabetes">Do you have diabetes, if so which type?</label>
 	  <p>
-	  <input type="radio" name="yes_noDiabetes">Yes</input>
-	  <input type="radio" name="yes_noDiabetes">No</input>
-	  </p>
-  </div>
-  <div>
-	  <label for="type_of_Diabetes">If yes to the above question, which type?</label>
-	  <p>
+	  <input type="radio" name="yes_noTypeDiabetes">None</input>
 	  <input type="radio" name="yes_noTypeDiabetes">Type 1</input>
 	  <input type="radio" name="yes_noTypeDiabetes">Type 2</input>
 	  </p>
