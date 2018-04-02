@@ -66,88 +66,89 @@
 
   <!-- Start of Form -->
   <div class="wrapper">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-8 ml-auto mr-auto text-center">
-                      <form action ="ShareFileProcess.php" method = "post"/>
-                        <div class = "form-group">
-                          <label for = "email"> Email Address </label>
-                          <input type = "Email" class = "form-control is-valid" name = "email" id = "email" required>
-                        </div>
-                      </div>
-                      <div class = "col-lg-8 ml-auto mr-auto">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="1" name ="ShareAll" id="ShareAll" tabIndex="1" onClick="ckChange(this)">
-                          <label class="form-check-label" for="ShareAll">
-                            Share All Details
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="1" name ="CustomShare" id="CustomShare" tabIndex="1" onClick="ckChange(this)">
-                          <label class="form-check-label" for="CustomShare">
-                            Custom Share
-                          </label>
-                        </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="1" name ="CustomSharePersonalInfo" id="CustomSharePersonalInfo" tabIndex="1" onClick="ckChange(this)">
-                        <label class="form-check-label" for="CustomSharePersonalInfo">
-                          Personal Information
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="1" name ="CustomShareEmergencyContact" id="CustomShareEmergencyContact" tabIndex="1" onClick="ckChange(this)">
-                        <label class="form-check-label" for="CustomShare">
-                          Emergency Contact
-                        </label>
-                      </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name ="CustomShareDoctorInfo" value="1" id="CustomShareDoctorInfo" tabIndex="1" onClick="ckChange(this)">
-                      <label class="form-check-label" for="CustomShareDoctorInfo">
-                        Doctor Information
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name ="CustomShareCurrentMed" value="1" id="CustomShareCurrentMed" tabIndex="1" onClick="ckChange(this)">
-                      <label class="form-check-label" for="CustomShareCurrentMed">
-                        Current Medication
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name ="CustomSharePresentMedicalHistory" value="1" id="CustomSharePresentMedicalHistory" tabIndex="1" onClick="ckChange(this)">
-                      <label class="form-check-label" for="CustomSharePresentMedicalHistory">
-                        Present Medical History
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name ="CustomShareChronicDiseaseAssessment" value="1" id="CustomShareChronicDiseaseAssessment" tabIndex="1" onClick="ckChange(this)">
-                      <label class="form-check-label" for="CustomShareChronicDiseaseAssessment">
-                        Chronic disease assessment
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name ="CustomShareFamDiseases" value="1" id="CustomShareFamDiseases" tabIndex="1" onClick="ckChange(this)">
-                      <label class="form-check-label" for="CustomShareFamDiseases">
-                        Family Diseases
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name ="CustomSharePastMedHistory" value="1" id="CustomSharePastMedHistory" tabIndex="1" onClick="ckChange(this)">
-                      <label class="form-check-label" for="CustomSharePastMedHistory">
-                        Past Medical History
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name ="CustomShareHeartDiseaseRiskFacts" value="1" id="CustomShareHeartDiseaseRiskFacts" tabIndex="1" onClick="ckChange(this)">
-                      <label class="form-check-label" for="CustomShareHeartDiseaseRiskFacts">
-                        Heart Diseases Risk Factors
-                      </label>
-                    </div>
-                    <button type="submit" name = "submitted" class="btn btn-primary">Submit</button>
-                  </div>
-                  </form>
-              </div>
-          <div>
-   </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ml-auto mr-auto text-center">
+          <h1>Share Your File </h1>
+          <form action ="ShareFileProcess.php" method = "post"/>
+          <div class = "form-group">
+            <label for = "email"> Email Address </label>
+            <input type = "Email" class = "form-control is-valid" name = "email" id = "email" required>
+          </div>
+        </div>
+        <div class = "col-lg-8 ml-auto mr-auto">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name ="ShareAll" id="ShareAll" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="ShareAll">
+              Share All Details
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name ="CustomShare" id="CustomShare" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomShare">
+              Custom Share
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name ="CustomSharePersonalInfo" id="CustomSharePersonalInfo" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomSharePersonalInfo">
+              Personal Information
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" name ="CustomShareEmergencyContact" id="CustomShareEmergencyContact" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomShare">
+              Emergency Contact
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name ="CustomShareDoctorInfo" value="1" id="CustomShareDoctorInfo" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomShareDoctorInfo">
+              Doctor Information
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name ="CustomShareCurrentMed" value="1" id="CustomShareCurrentMed" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomShareCurrentMed">
+              Current Medication
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name ="CustomSharePresentMedicalHistory" value="1" id="CustomSharePresentMedicalHistory" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomSharePresentMedicalHistory">
+              Present Medical History
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name ="CustomShareChronicDiseaseAssessment" value="1" id="CustomShareChronicDiseaseAssessment" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomShareChronicDiseaseAssessment">
+              Chronic disease assessment
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name ="CustomShareFamDiseases" value="1" id="CustomShareFamDiseases" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomShareFamDiseases">
+              Family Diseases
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name ="CustomSharePastMedHistory" value="1" id="CustomSharePastMedHistory" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomSharePastMedHistory">
+              Past Medical History
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name ="CustomShareHeartDiseaseRiskFacts" value="1" id="CustomShareHeartDiseaseRiskFacts" tabIndex="1" onClick="ckChange(this)">
+            <label class="form-check-label" for="CustomShareHeartDiseaseRiskFacts">
+              Heart Diseases Risk Factors
+            </label>
+          </div>
+          <button type="submit" name = "submitted" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div>
+  </div>
 
 
 </body>
