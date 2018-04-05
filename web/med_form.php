@@ -509,6 +509,17 @@
   If you smoked(now or in the past), what age did you start?<br>
   <textarea name="ageOfSmoke" rows="5" cols="30"></textarea>
 </fieldset>
+<br>
+<fieldset>
+<legend>Consent</legend>
+  <div>
+	  <label for="yes_no_consent">Do you give us permission to share your medical data?</label>
+	  <p>
+	  <input type="radio" name="yes_nosmoking">Yes</input>
+	  <input type="radio" name="yes_nosmoking">No</input>
+	  </p>
+  </div>
+</fieldset>
 <div class="send-button">
   <a href="./MyFiles.html" class="btn btn-primary btn-round btn-block btn-lg">Submit</a>
 </div>
