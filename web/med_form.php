@@ -14,6 +14,7 @@
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
 	<link href="./assets/css/form.css" rel="stylesheet"/>
+	<link href="./assets/css/modal.css" rel="stylesheet"/>
    
 </head>
 <body class="index-page sidebar-collapse">
@@ -510,18 +511,26 @@
   <textarea name="ageOfSmoke" rows="5" cols="30"></textarea>
 </fieldset>
 <br>
-<fieldset>
-<legend>Consent</legend>
-  <div>
-	  <label for="yes_no_consent">Do you give us permission to share your medical data?</label>
+</fieldset>
+<div id="mod" class="send-button" onclick="pop_up()">
+  <p class="btn btn-primary btn-round btn-block btn-lg">Submit</p>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div>
+	  <label for="yes_no_consent">Do you give us permission to share your medical data anonymously?</label>
 	  <p>
-	  <input type="radio" name="yes_nosmoking">Yes</input>
-	  <input type="radio" name="yes_nosmoking">No</input>
+	  <input type="radio" name="yes_noConsent">Yes</input>
+	  <input type="radio" name="yes_noConsent">No</input>
 	  </p>
   </div>
-</fieldset>
-<div class="send-button">
-  <a href="./MyFiles.html" class="btn btn-primary btn-round btn-block btn-lg">Submit</a>
+  <a href="./MyFiles.html">Submit</a>
+  </div>
+
 </div>
 </form>
 <footer class="footer footer-default">
@@ -578,6 +587,31 @@
             }, 1000);
         }
     }
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("mod");
+
+// When the user clicks on the button, open the modal 
+function pop_up() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 </script>
 
 </html>
