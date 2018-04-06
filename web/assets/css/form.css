@@ -4,8 +4,11 @@ form {
   padding: 1em;
   border: 1px solid #CCC;
   border-radius: 1em;
+  background-color: white;
 }
-
+body {
+	background-color: #fff8f4;
+}
 legend {
   text-align: center;
   text-decoration: underline;
