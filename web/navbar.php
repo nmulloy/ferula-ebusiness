@@ -2,7 +2,7 @@
 	echo ' <nav class="navbar navbar-expand-lg bg-primary fixed-top" >
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="./home.html">
+                <a class="navbar-brand" href="./">
                     FERULA
                 </a>
                 <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,13 +14,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="./home.html" ">
+                        <a class="nav-link" href="./home.php" ">
                             <i class="now-ui-icons media-2_sound-wave"></i>
                             <p>Home</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="myfiles.html">
+                        <a class="nav-link" href="./myfiles.php">
                             <i class="now-ui-icons files_single-copy-04"></i>
                             <p>My Files</p>
                         </a>
@@ -28,7 +28,7 @@
                     
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="./landing_page.html">
+                        <a class="nav-link" href="./logout.inc.php">
                             <i class="now-ui-icons ui-1_settings-gear-63"></i>
                             <p>Log out</p>
                         </a>

@@ -31,7 +31,7 @@
         <div class="container">
             <div class="col-md-4 content-center">
                 <div class="card card-login card-plain">
-                    <form class="form" method="" action="">
+                    <form class="form" method="POST" action="includes/login.inc.php">
                         <div class="header header-primary text-center">
                             <p> LOG IN </p>
                         </div>
@@ -40,17 +40,17 @@
                                 <span class="input-group-addon">
                                     <i class="now-ui-icons users_circle-08"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Email...">
+                                <input type="text" name="uidLogin" class="form-control" placeholder="Email...">
                             </div>
                             <div class="input-group form-group-no-border input-lg">
                                 <span class="input-group-addon">
                                     <i class="now-ui-icons objects_key-25"></i>
                                 </span>
-                                <input type="password" placeholder="Password..." class="form-control" />
+                                <input type="password" name="pwd" placeholder="Password..." class="form-control" />
                             </div>
                         </div>
-                        <div class="footer text-center">
-                            <a href="./myfiles.html" class="btn btn-primary btn-round btn-lg btn-block">Log in</a>
+                         <div class="footer text-center">
+                            <button type="submit" name="submit" class="btn btn-primary btn-round btn-lg btn-block">Login</button>
                         </div>
                     </form>
                 </div>

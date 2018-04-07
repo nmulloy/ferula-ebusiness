@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="./landing_page.html" ">
+                        <a class="nav-link" href="./index.php" ">
                             <i class="now-ui-icons media-2_sound-wave"></i>
                             <p>Home</p>
                         </a>
@@ -22,7 +22,7 @@
                     
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="./login_page.html">
+                        <a class="nav-link" href="./login_page.php">
                             <i class="now-ui-icons ui-1_settings-gear-63"></i>
                             <p>Log In</p>
                         </a>
