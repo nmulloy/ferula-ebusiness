@@ -40,7 +40,7 @@
 						$sqlConnect = "INSERT INTO users (user_first, user_last, user_email, user_pwd)
 						VALUES  ('$first', '$last', '$email', '$hashedPwd');";
 						$result= mysqli_query($conn, $sqlConnect);
-							header("Location: ../med_form.html");
+							header("Location: ../med_form.php");
 							exit();
 					}	
 				}

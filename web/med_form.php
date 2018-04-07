@@ -50,7 +50,7 @@
     }
 </script>
 <h1>Medical Form</h1>
-<form action="" method="post">
+<form action="includes/medFormSubmit.inc.php" method = "POST">
 
 <fieldset>
   <legend>Personal Information:</legend>
@@ -494,7 +494,7 @@
     <input type="radio" name="yes_noConsent">No</input>
     </p>
   </div>
-  <a href="./MyFiles.php">Submit</a>
+  <button type="submit" name="submit" class="btn btn-primary btn-round btn-block">Submit</button>
   </div>
 
 </div>
