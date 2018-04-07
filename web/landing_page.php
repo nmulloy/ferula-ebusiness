@@ -70,38 +70,60 @@
             </div>
         </div>
        
-        <div class="section section-contact-us text-center">
+        <div class="section section-contact-us text-center" id="subscribeSection">
             <div class="container">
                 <h2 class="title">Would you like to subscribe?</h2>
                 <p class="description">Your health is very important to us.</p>
                 <div class="row">
-                    <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
-                        
-                        <div class="input-group input-lg">
-                            <span class="input-group-addon">
-                                <i class="now-ui-icons ui-1_email-85"></i>
-                            </span>
-                            <input type="text" class="form-control" placeholder="Email...">
-                        </div>
-
-                        <div class="input-group input-lg">
-                            <span class="input-group-addon">
-                                <i class="now-ui-icons objects_key-25"></i>
-                            </span>
-                            <input type="password" class="form-control" placeholder="Password...">
-                        </div>
-
-                        <div class="input-group input-lg">
-                            <span class="input-group-addon">
-                                <i class="now-ui-icons objects_key-25"></i>
-                            </span>
-                            <input type="password" class="form-control" placeholder="Confirm Password...">
-                        </div>
-
-                        <div class="send-button">
-                            <a href="./med_form.html" class="btn btn-primary btn-round btn-block btn-lg">Subscribe</a>
-                        </div>
-                    </div>
+					<div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+						<form class= "signup-form" action="includes/signup.inc.php" method = "POST">
+						
+						  <div class="content">
+							  
+								<div class="input-group form-group-no-border input-lg">
+									<span class="input-group-addon">
+										<i class="now-ui-icons users_circle-08"></i>
+									</span>
+									<input type="text" name="first" class="form-control" placeholder="Firstname">
+								</div>
+								
+								<div class="input-group form-group-no-border input-lg">
+									<span class="input-group-addon">
+										<i class="now-ui-icons users_circle-08"></i>
+									</span>
+									<input type="text" name="last" class="form-control" placeholder="Surname">
+								</div>
+						
+								<div class="input-group form-group-no-border input-lg">
+									<span class="input-group-addon">
+										<i class="now-ui-icons ui-1_email-85"></i>
+									</span>
+									<input type="text" name="email" class="form-control" placeholder="Email">
+								</div>
+								
+								
+								<div class="input-group form-group-no-border input-lg">
+									<span class="input-group-addon">
+										<i class="now-ui-icons objects_key-25"></i>
+									</span>
+									<input type="password" name="pwd" placeholder="Password" class="form-control" />
+								</div>
+								
+								<div class="input-group form-group-no-border input-lg">
+									<span class="input-group-addon">
+										<i class="now-ui-icons objects_key-25"></i>
+									</span>
+									<input type="password" name="pwdConfirm" placeholder="Confirm Password" class="form-control" />
+								</div>
+								
+								 <div class="footer text-center">
+								<button type="submit" name="submit" class="btn btn-primary btn-round btn-lg btn-block">Subscribe</button>
+								</div>
+							
+							</div>
+						
+						</form>
+					</div>
                 </div>
             </div>
         </div>

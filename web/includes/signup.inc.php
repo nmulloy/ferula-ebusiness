@@ -11,13 +11,13 @@
 		
 		//error handlers
 		if(empty($first) || empty($last) || empty($email) || empty($pwd)){
-			header("Location: ../signup_page.php?signup=empty");
+			header("Location: ../landing_page.php?signup=empty");
 			exit();
 		} else {
 			//check if input characters are valid
 			
 			if(!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/" , $last)) {
-				header("Location: ../signup_page.php?signup=invalid");
+				header("Location: ../landing_page.php?signup=invalid");
 				exit();
 			} else {
 				/*//check if email is valid
@@ -25,12 +25,12 @@
 					header("Location: ../signup.php?signup=email");
 					exit();
 				} else{*/
-					$sql = "SELECT * FROM users WHERE user_uid= '$uid'";
+					$sql = "SELECT * FROM users WHERE user_email= '$email'";
 					$result = mysqli_query($conn,$sql);
 					$resultCheck = mysqli_num_rows($result);
 					
 					if($resultCheck > 0){
-						header("Location: ../signup_page.php?signup=usertaken");
+						header("Location: ../landing_page.php?signup=usertaken");
 						exit();
 					} else{
 						//hashing the password
@@ -40,7 +40,7 @@
 						$sqlConnect = "INSERT INTO users (user_first, user_last, user_email, user_pwd)
 						VALUES  ('$first', '$last', '$email', '$hashedPwd');";
 						$result= mysqli_query($conn, $sqlConnect);
-							header("Location: ../login_page.php");
+							header("Location: ../med_form.html");
 							exit();
 					}	
 				}
