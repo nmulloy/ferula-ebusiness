@@ -28,7 +28,7 @@
                     
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="./logout.inc.php">
+                        <a class="nav-link" href="./includes/logout.inc.php">
                             <i class="now-ui-icons ui-1_settings-gear-63"></i>
                             <p>Log out</p>
                         </a>

@@ -494,7 +494,7 @@
     <input type="radio" name="yes_noConsent">No</input>
     </p>
   </div>
-  <a href="./MyFiles.html">Submit</a>
+  <a href="./MyFiles.php">Submit</a>
   </div>
 
 </div>
