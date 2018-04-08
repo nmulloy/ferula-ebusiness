@@ -1,4 +1,13 @@
-
+<?php
+include 'includes/dbh.inc.php' ;
+$uID = $_SESSION['u_id'];
+$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+$sqlShared = "SELECT receiver FROM Shares WHERE sender = '$uID'";
+$result = mysqli_query($conn, $sqlShared);
+$row = mysqli_fetch_assoc($result);
+$fnameQuery = "SELECT user_first, user_last FROM users WHERE user_id = '$row[receiver]'";
+$nameResult = mysqli_query($conn, $fnameQuery);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,17 +40,38 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 ml-auto mr-auto text-center">
-                        <button class="btn btn-primary btn-lg" id = "personal-button" >My File</button>
-						<a class="btn btn-primary btn-lg" href = "SharedFiles.php" = "shared-button"> Shared With Me </a>
+                        <a class="btn btn-primary btn-lg" href = "MyFiles.php" id = "personal-button" >My File</a>
+						<button class="btn btn-primary btn-lg" id = "shared-button"> Shared With Me </button>
                         <button class="btn btn-primary btn-lg" id = "isharing-button"> I Share With  </button>
 
                     </div>
                 </div>
             </div>
 
-            <?php
-			include_once "./includes/medInfo.inc.php"; // this will include a.php
-			?>
+            <div class="container" >
+                <div class="row">
+
+
+						<div id = "shared" class = "text-center"> <!-- start of shared files-->
+						  <?php
+                while ($rows = mysqli_fetch_assoc($nameResult)) {
+                ?>
+                <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
+  							<div > <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /></div>
+  								<p> <td> <?php echo $rows['user_first'];  ?></td>
+                  <td> <?php echo $rows['user_last']; ?></td> </p>
+  							</div>
+                  <?php
+                }
+                  ?>
+                  <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
+                    <div > <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /></div>
+                    <a class="btn btn-primary" href="ShareFile.php" role="button">Add People</a>
+                  </div>
+						</div><!-- end of shared files files -->
+                    </div>
+                </div>
+            </div>
 
             <footer class="footer footer-default">
             <div class="container">
@@ -90,9 +120,7 @@
         // the body of this function is in assets/js/now-ui-kit.js
         nowuiKit.initSliders();
     });
-
     function scrollToDownload() {
-
         if ($('.section-download').length != 0) {
             $("html, body").animate({
                 scrollTop: $('.section-download').offset().top
