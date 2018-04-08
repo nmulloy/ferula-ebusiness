@@ -19,9 +19,7 @@ $qResult = mysqli_query($conn, $query);
 $name = mysqli_fetch_assoc($qResult);
 
 $id = $_SESSION['u_id'];
-$id = 1;
-$name = 2;
-$sender = 2;
+$sender = $name['user_id'];
 $sql = "SELECT ShareAll, PersonalInfo, EmergContact, DocInfo,
 CurrentMed, PresMedHist, ChronicDisease, FamDisease, PastMedHist, HeartDiseaseRisk FROM shares WHERE Receiver = $id AND Sender = $sender";
 $result = mysqli_query($conn, $sql);

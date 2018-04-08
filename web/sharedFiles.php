@@ -1,7 +1,6 @@
 <?php
 include 'includes/dbh.inc.php' ;
 $uID = $_SESSION['u_id'];
-$uID = 1;
 $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
 $sqlShared = "SELECT sender FROM Shares WHERE receiver = '$uID'";
 $result = mysqli_query($conn, $sqlShared);
