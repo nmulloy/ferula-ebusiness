@@ -1,26 +1,12 @@
 <?php
-<<<<<<< HEAD
+	session_start();
 	include 'dbh.inc.php';
 
-	session_start();
 	$id = $_SESSION['u_id'];
-	//echo $id;
-
-	$sqlget = "SELECT * FROM userpersonalinfo WHERE user_id = $id";
-	$sqldata = mysqli_query($conn, $sqlget);
-
-	echo' <div class="container" >
-=======
-	
-	session_start();
-	include 'dbh.inc.php';
-
-	$id = $_SESSION['u_id'];;
 	$sqlget = "SELECT * FROM userpersonalinfo WHERE user_id = $id";
 	$sqldata = mysqli_query($conn, $sqlget);
 
 	echo'<div class="container" >
->>>>>>> ec63e41787ef2a32ababded5828934fc65ad2ebe
                 <div class="row">
                     <div class="col-md-12 ml-auto mr-auto ">
 						 <div class="separator separator-primary"></div>
