@@ -1,3 +1,13 @@
+<?php
+include('dbh.inc.php');
+$uID = $_SESSION['u_id'];
+$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+$sqlShared = "SELECT receiver FROM Shares WHERE sender = '$uID'";
+$result = mysqli_query($conn, $sqlShared);
+$row = mysqli_fetch_assoc($result);
+$fnameQuery = "SELECT user_first, user_last FROM users WHERE user_id = '$row[receiver]'";
+$nameResult = mysqli_query($conn, $fnameQuery);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -261,11 +271,21 @@
 						  <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
 						      <div> <img class = "img-fluid rounded-img" src="./assets/img/maryoconnell.png" /></div>
 								<p> Mary O'Connell </p>
-							</div>
-							<div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
-							<div > <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /></div>
-								<p> Add people </p>
-							</div> 
+							<?php
+                while ($rows = mysqli_fetch_assoc($nameResult)) {
+                ?>
+                <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
+  							<div > <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /></div>
+  								<p> <td> <?php echo $rows['user_first'];  ?></td>
+                  <td> <?php echo $rows['user_last']; ?></td> </p>
+  							</div>
+                  <?php
+                }
+                  ?>
+                  <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
+                    <div > <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /></div>
+                    <p> Add people </p>
+                  </div>
 						</div><!-- end of shared files files -->
                     </div>
                 </div>
