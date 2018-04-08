@@ -271,11 +271,12 @@ $nameResult = mysqli_query($conn, $fnameQuery);
 						  <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
 						      <div> <img class = "img-fluid rounded-img" src="./assets/img/maryoconnell.png" /></div>
 								<p> Mary O'Connell </p>
+              </div>
 							<?php
                 while ($rows = mysqli_fetch_assoc($nameResult)) {
                 ?>
                 <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
-  							<div > <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /></div>
+  							<div > <img class = "img-fluid rounded-img" src="./assets/img/default-avatar.png" /></div>
   								<p> <td> <?php echo $rows['user_first'];  ?></td>
                   <td> <?php echo $rows['user_last']; ?></td> </p>
   							</div>
@@ -283,11 +284,11 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                 }
                   ?>
                   <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
-                    <div > <a class = "img-fluid rounded-img" src="./assets/img/add_people.jpg"  href = "ShareFile.php">
+                    <div> <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /> </div>
+                     <a class = "img-fluid rounded-im" src="./assets/img/add_people.jpg"  href = "ShareFile.php">
                     <p> Add people </p>
                   </a>
                     </div>
-                  </div>
 						</div><!-- end of shared files files -->
                     </div>
                 </div>
