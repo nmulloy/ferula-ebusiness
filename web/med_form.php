@@ -50,7 +50,7 @@
     }
 </script>
 <h1>Medical Form</h1>
-<form action="includes/medFormSubmit.inc.php" method = "POST">
+<form action="med_form_action.php" method="post"/>
 
 <fieldset>
   <legend>Personal Information:</legend>
@@ -138,7 +138,7 @@
   <textarea name="medication" rows="5" cols="30"></textarea>
   <br>
   Dosage and Frequency:<br>
-  <textarea name="medication" rows="5" cols="30"></textarea>
+  <textarea name="meddose" rows="5" cols="30"></textarea>
 </fieldset>
 <br>
 <fieldset>
@@ -155,36 +155,36 @@
   <div>
     <label for="yes_no_visionProblems">Do you have any problems with your vision?</label>
     <p>
-    <input type="radio" name="yes_noVision">Yes</input>
-    <input type="radio" name="yes_noVision">No</input>
+    <input type="radio" name="yes_noVision" value = 1>Yes</input>
+    <input type="radio" name="yes_noVision" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_glasses">Do you wear glasses or contacts?</label>
     <p>
-    <input type="radio" name="yes_noGlasses">Yes</input>
-    <input type="radio" name="yes_noGlasses">No</input>
+    <input type="radio" name="yes_noGlasses" value = 1>Yes</input>
+    <input type="radio" name="yes_noGlasses" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_hearingProblems">Do you have any problems with your hearing?</label>
     <p>
-    <input type="radio" name="yes_noHearingProblems">Yes</input>
-    <input type="radio" name="yes_noHearingProblems">No</input>
+    <input type="radio" name="yes_noHearingProblems" value = 1>Yes</input>
+    <input type="radio" name="yes_noHearingProblems" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_speechProblems">Do you have any problems with your speech?</label>
     <p>
-    <input type="radio" name="yes_noSpeechProblems">Yes</input>
-    <input type="radio" name="yes_noSpeechProblems">No</input>
+    <input type="radio" name="yes_noSpeechProblems" value = 1>Yes</input>
+    <input type="radio" name="yes_noSpeechProblems" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_highBloodPressure">Do you have high blood pressure?</label>
     <p>
-    <input type="radio" name="yes_noBloodPressure">Yes</input>
-    <input type="radio" name="yes_noBloodPressure">No</input>
+    <input type="radio" name="yes_noBloodPressure" value = 1>Yes</input>
+    <input type="radio" name="yes_noBloodPressure" value = 0>No</input>
     </p>
   </div>
   Do you have any heart problems?<br>
@@ -196,15 +196,15 @@
   <div>
     <label for="yes_no_breatheProblems">Do you have any problems breathing or coughing?</label>
     <p>
-    <input type="radio" name="yes_noBreatheProblems">Yes</input>
-    <input type="radio" name="yes_noBreatheProblems">No</input>
+    <input type="radio" name="yes_noBreatheProblems" value = 1>Yes</input>
+    <input type="radio" name="yes_noBreatheProblems" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_adhd">Do you suffer from Attention deficit disorder?</label>
     <p>
-    <input type="radio" name="yes_noADHD">Yes</input>
-    <input type="radio" name="yes_noADHD">No</input>
+    <input type="radio" name="yes_noADHD" value = 1>Yes</input>
+    <input type="radio" name="yes_noADHD" value = 0>No</input>
     </p>
   </div>
 </fieldset>
@@ -214,43 +214,43 @@
   <div>
     <label for="yes_no_hasAsthma">Do you suffer from asthma?</label>
     <p>
-    <input type="radio" name="yes_noAsthma">Yes</input>
-    <input type="radio" name="yes_noAsthma">No</input>
+    <input type="radio" name="yes_noAsthma" value = 1>Yes</input>
+    <input type="radio" name="yes_noAsthma" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_asthmaType">If yes to the above question, please tick the box below which best describes it</label>
     <p>
-    <input type="radio" name="yes_noasthmaType">Intermittent</input>
-    <input type="radio" name="yes_noasthmaType">Mild</input>
-    <input type="radio" name="yes_noasthmaType">Persistent</input>
-    <input type="radio" name="yes_noasthmaType">Moderate persistent</input>
-    <input type="radio" name="yes_noasthmaType">Severe persistent</input>
-    <input type="radio" name="yes_noasthmaType">Exercise Induced</input>
+    <input type="radio" name="yes_noasthmaType" value = 6>Intermittent</input>
+    <input type="radio" name="yes_noasthmaType" value = 5>Mild</input>
+    <input type="radio" name="yes_noasthmaType" value = 4>Persistent</input>
+    <input type="radio" name="yes_noasthmaType" value = 3>Moderate persistent</input>
+    <input type="radio" name="yes_noasthmaType" value = 2>Severe persistent</input>
+    <input type="radio" name="yes_noasthmaType" value = 1>Exercise Induced</input>
     </p>
   </div>
   <div>
     <label for="yes_no_hasDiabetes">Do you have diabetes?</label>
     <p>
-    <input type="radio" name="yes_noDiabetes">Yes</input>
-    <input type="radio" name="yes_noDiabetes">No</input>
+    <input type="radio" name="yes_noDiabetes" value = 1>Yes</input>
+    <input type="radio" name="yes_noDiabetes" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="type_of_Diabetes">If yes to the above question, which type?</label>
     <p>
-    <input type="radio" name="yes_noTypeDiabetes">Type 1</input>
-    <input type="radio" name="yes_noTypeDiabetes">Type 2</input>
+    <input type="radio" name="yes_noTypeDiabetes" value = 1>Type 1</input>
+    <input type="radio" name="yes_noTypeDiabetes" value = 2>Type 2</input>
     </p>
   </div>
   <div>
     <label for="yes_no_seizures">Do you suffer from seizures?</label>
     <p>
-    <input type="radio" name="yes_noseizures">Yes</input>
-    <input type="radio" name="yes_noseizures">No</input>
+    <input type="radio" name="yes_noseizures" value = 1>Yes</input>
+    <input type="radio" name="yes_noseizures" value = 0>No</input>
     </p>
   </div>
-  
+
 </fieldset>
 <br>
 <fieldset>
@@ -259,78 +259,78 @@
   <div>
     <label for="yes_no_heart">Heart attack under the age of 50</label>
     <p>
-    <input type="radio" name="yes_noheart">Yes</input>
-    <input type="radio" name="yes_noheart">No</input>
+    <input type="radio" name="yes_noheart" value = 1>Yes</input>
+    <input type="radio" name="yes_noheart" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_stroke">Stroke under the age of 50</label>
     <p>
-    <input type="radio" name="yes_nostroke">Yes</input>
-    <input type="radio" name="yes_nostroke">No</input>
+    <input type="radio" name="yes_nostroke" value = 1>Yes</input>
+    <input type="radio" name="yes_nostroke" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_highBlood">High Blood pressure</label>
     <p>
-    <input type="radio" name="yes_noHighBlood">Yes</input>
-    <input type="radio" name="yes_noHighBlood">No</input>
+    <input type="radio" name="yes_noHighBlood" value = 1>Yes</input>
+    <input type="radio" name="yes_noHighBlood" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_cholesterol">Elevated cholesterol</label>
     <p>
-    <input type="radio" name="yes_nocholesterol">Yes</input>
-    <input type="radio" name="yes_nocholesterol">No</input>
+    <input type="radio" name="yes_nocholesterol" value = 1>Yes</input>
+    <input type="radio" name="yes_nocholesterol" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_diabetes">Diabetes</label>
     <p>
-    <input type="radio" name="yes_noRelDiabetes">Yes</input>
-    <input type="radio" name="yes_noRelDiabetes">No</input>
+    <input type="radio" name="yes_noRelDiabetes" value = 1>Yes</input>
+    <input type="radio" name="yes_noRelDiabetes" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_asthma">Asthma or hay fever</label>
     <p>
-    <input type="radio" name="yes_noRelAsthma">Yes</input>
-    <input type="radio" name="yes_noRelAsthma">No</input>
+    <input type="radio" name="yes_noRelAsthma" value = 1>Yes</input>
+    <input type="radio" name="yes_noRelAsthma" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_heartDiseases">Congenital heart diseases (existing at birth but not hereditary)</label>
     <p>
-    <input type="radio" name="yes_noRelheartDiseases">Yes</input>
-    <input type="radio" name="yes_noRelheartDiseases">No</input>
+    <input type="radio" name="yes_noRelheartDiseases" value = 1>Yes</input>
+    <input type="radio" name="yes_noRelheartDiseases" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_heartOps">Heart Operations</label>
     <p>
-    <input type="radio" name="yes_noheartOps">Yes</input>
-    <input type="radio" name="yes_noheartOps">No</input>
+    <input type="radio" name="yes_noheartOps" value = 1>Yes</input>
+    <input type="radio" name="yes_noheartOps" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_glaucoma">Glaucoma</label>
     <p>
-    <input type="radio" name="yes_noGlaucoma">Yes</input>
-    <input type="radio" name="yes_noGlaucoma">No</input>
+    <input type="radio" name="yes_noGlaucoma" value = 1>Yes</input>
+    <input type="radio" name="yes_noGlaucoma" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_obesity">Obesity</label>
     <p>
-    <input type="radio" name="yes_noObesity">Yes</input>
-    <input type="radio" name="yes_noObesity">No</input>
+    <input type="radio" name="yes_noObesity" value = 1>Yes</input>
+    <input type="radio" name="yes_noObesity" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_cancer">Leukemia or cancer under the age of 60</label>
     <p>
-    <input type="radio" name="yes_noLeukemia">Yes</input>
-    <input type="radio" name="yes_noLeukemia">No</input>
+    <input type="radio" name="yes_noLeukemia" value = 1>Yes</input>
+    <input type="radio" name="yes_noLeukemia" value = 0>No</input>
     </p>
   </div>
   Additional Comments:<br>
@@ -342,120 +342,120 @@
   <div>
     <label for="yes_no_heartAttack">Have you ever had a heart attack?</label>
     <p>
-    <input type="radio" name="yes_noRelheartAttack">Yes</input>
-    <input type="radio" name="yes_noRelheartAttack">No</input>
+    <input type="radio" name="yes_noRelheartAttack" value = 1>Yes</input>
+    <input type="radio" name="yes_noRelheartAttack" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_rheaumaticFever">Have you ever had Rheumatic Fever?</label>
     <p>
-    <input type="radio" name="yes_norheaumaticFever">Yes</input>
-    <input type="radio" name="yes_norheaumaticFever">No</input>
+    <input type="radio" name="yes_norheaumaticFever" value = 1>Yes</input>
+    <input type="radio" name="yes_norheaumaticFever" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_heartMurmur">Have you ever had a Heart Murmur?</label>
     <p>
-    <input type="radio" name="yes_noheartMurmur">Yes</input>
-    <input type="radio" name="yes_noheartMurmur">No</input>
+    <input type="radio" name="yes_noheartMurmur" value = 1>Yes</input>
+    <input type="radio" name="yes_noheartMurmur" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_diseaseArteries">Have you ever suffered from disease of the arteries?</label>
     <p>
-    <input type="radio" name="yes_nodiseaseArteries">Yes</input>
-    <input type="radio" name="yes_nodiseaseArteries">No</input>
+    <input type="radio" name="yes_nodiseaseArteries" value = 1>Yes</input>
+    <input type="radio" name="yes_nodiseaseArteries" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_varicoseVeins">Have you ever suffered from varicose veins?</label>
     <p>
-    <input type="radio" name="yes_novaricoseVeins">Yes</input>
-    <input type="radio" name="yes_novaricoseVeins">No</input>
+    <input type="radio" name="yes_novaricoseVeins" value = 1>Yes</input>
+    <input type="radio" name="yes_novaricoseVeins" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_arthritis">Have you ever suffered from arthritis?</label>
     <p>
-    <input type="radio" name="yes_noarthritis">Yes</input>
-    <input type="radio" name="yes_noarthritis">No</input>
+    <input type="radio" name="yes_noarthritis" value = 1>Yes</input>
+    <input type="radio" name="yes_noarthritis" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_dizziness">Have you ever suffered from dizziness or fainting spells?</label>
     <p>
-    <input type="radio" name="yes_nodizziness">Yes</input>
-    <input type="radio" name="yes_nodizziness">No</input>
+    <input type="radio" name="yes_nodizziness" value = 1>Yes</input>
+    <input type="radio" name="yes_nodizziness" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_epilepsy">Have you ever suffered from epilepsy or seizures?</label>
     <p>
-    <input type="radio" name="yes_noepilepsy">Yes</input>
-    <input type="radio" name="yes_noepilepsy">No</input>
+    <input type="radio" name="yes_noepilepsy" value = 1>Yes</input>
+    <input type="radio" name="yes_noepilepsy" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_stroke">Have you ever had a stroke?</label>
     <p>
-    <input type="radio" name="yes_nopaststroke">Yes</input>
-    <input type="radio" name="yes_nopaststroke">No</input>
+    <input type="radio" name="yes_nopaststroke" value = 1>Yes</input>
+    <input type="radio" name="yes_nopaststroke" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_diphtheria">Have you ever suffered from diphtheria?</label>
     <p>
-    <input type="radio" name="yes_nodiphtheria">Yes</input>
-    <input type="radio" name="yes_nodiphtheria">No</input>
+    <input type="radio" name="yes_nodiphtheria" value = 1>Yes</input>
+    <input type="radio" name="yes_nodiphtheria" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_scarletFever">Have you ever had scarlet fever?</label>
     <p>
-    <input type="radio" name="yes_noscarletFever">Yes</input>
-    <input type="radio" name="yes_noscarletFever">No</input>
+    <input type="radio" name="yes_noscarletFever" value = 1>Yes</input>
+    <input type="radio" name="yes_noscarletFever" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_mononucleosis">Have you ever suffered from Infectious mononucleosis?</label>
     <p>
-    <input type="radio" name="yes_nomononucleosis">Yes</input>
-    <input type="radio" name="yes_nomononucleosis">No</input>
+    <input type="radio" name="yes_nomononucleosis" value = 1>Yes</input>
+    <input type="radio" name="yes_nomononucleosis" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_anemia">Have you ever suffered from Anemia?</label>
     <p>
-    <input type="radio" name="yes_noanemia">Yes</input>
-    <input type="radio" name="yes_noanemia">No</input>
+    <input type="radio" name="yes_noanemia" value = 1>Yes</input>
+    <input type="radio" name="yes_noanemia" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_thyroid">Have you ever had any Thyroid problems?</label>
     <p>
-    <input type="radio" name="yes_nothyroid">Yes</input>
-    <input type="radio" name="yes_nothyroid">No</input>
+    <input type="radio" name="yes_nothyroid" value = 1>Yes</input>
+    <input type="radio" name="yes_nothyroid" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_pneumonia">Have you ever suffered from Pneumonia?</label>
     <p>
-    <input type="radio" name="yes_nopneumonia">Yes</input>
-    <input type="radio" name="yes_nopneumonia">No</input>
+    <input type="radio" name="yes_nopneumonia" value = 1>Yes</input>
+    <input type="radio" name="yes_nopneumonia" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_injuries">Have you ever suffered any injuries to your back, arms, or legs?</label>
     <p>
-    <input type="radio" name="yes_noinjuries">Yes</input>
-    <input type="radio" name="yes_noinjuries">No</input>
+    <input type="radio" name="yes_noinjuries" value = 1>Yes</input>
+    <input type="radio" name="yes_noinjuries" value = 0>No</input>
     </p>
   </div>
   <div>
     <label for="yes_no_brokenBones">Have you ever broken any bones?</label>
     <p>
-    <input type="radio" name="yes_nobrokenBones">Yes</input>
-    <input type="radio" name="yes_nobrokenBones">No</input>
+    <input type="radio" name="yes_nobrokenBones" value = 1>Yes</input>
+    <input type="radio" name="yes_nobrokenBones" value = 0>No</input>
     </p>
   </div>
 </fieldset>
@@ -465,8 +465,8 @@
   <div>
     <label for="yes_no_smoking">Have you ever smoked?</label>
     <p>
-    <input type="radio" name="yes_nosmoking">Yes</input>
-    <input type="radio" name="yes_nosmoking">No</input>
+    <input type="radio" name="yes_nosmoking" value = 1>Yes</input>
+    <input type="radio" name="yes_nosmoking" value = 0>No</input>
     </p>
   </div>
   If you smoked(now or in the past), how many per day?<br>
