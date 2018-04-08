@@ -1,11 +1,4 @@
 <?php
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-=======
->>>>>>> db4707a0236254e5db6658bdec876da7bb2d9877
-=======
->>>>>>> db4707a0236254e5db6658bdec876da7bb2d9877
 	session_start();
 	include 'dbh.inc.php';
 
@@ -18,13 +11,13 @@
                     <div class="col-md-12 ml-auto mr-auto ">
 						 <div class="separator separator-primary"></div>
 					</div>
-                    
+
                     <div id="personal" >
                         <div class="section-nav">
                             <div class = "container">
                                 <div class="row">
                                     <div id="accordion" role="tablist" aria-multiselectable="true">
-                                        
+
                                         <div class="card">
                                             <div class="card-header" role="tab" id="headingOne">
                                                 <h5 class="mb-0">
@@ -48,11 +41,11 @@
 													<p>Weight (KG) :". $row['weight']. "</p>
 													<p>Blood Type:". $row['blood']. "</p>";
 												}
-                                               
+
 											   echo '</div>
                                             </div>
                                         </div>
-                                          
+
                                         <div class="card">
                                             <div class="card-header" role="tab" id="headingTwo">
                                                 <h5 class="mb-0">
@@ -63,8 +56,8 @@
                                             </div>
                                             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                                               <div class="card-block">';
-											  
-											  
+
+
 											  $sqlget = "SELECT * FROM emergcontact WHERE user_id = $id";
 												$sqldata = mysqli_query($conn, $sqlget);
 												while($row = mysqli_fetch_array($sqldata,MYSQLI_ASSOC)) {
@@ -72,9 +65,9 @@
 													<p>Last name :". $row['lName']. "</p>
 													<p>Contact Number :". $row['number']. "</p>
 													<p>Relationship : ". $row['relation']. "</p>";
-												
+
 												}
-												
+
                                               echo '</div>
                                             </div>
                                         </div>
@@ -89,7 +82,7 @@
                                             </div>
                                             <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
                                                 <div class="card-block">';
-												
+
 												$sqlget = "SELECT * FROM docinfo WHERE user_id = $id";
 												$sqldata = mysqli_query($conn, $sqlget);
 												while($row = mysqli_fetch_array($sqldata,MYSQLI_ASSOC)) {
@@ -115,7 +108,7 @@
                                             </div>
                                             <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
                                               <div class="card-block">';
-											  
+
                                                 $sqlget = "SELECT * FROM currentmed WHERE user_id = $id";
 												$sqldata = mysqli_query($conn, $sqlget);
 												while($row = mysqli_fetch_array($sqldata,MYSQLI_ASSOC)) {
@@ -155,7 +148,7 @@
                                               </div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="card">
                                             <div class="card-header" role="tab" id="headingSix">
                                               <h5 class="mb-0">
@@ -178,7 +171,7 @@
                                              echo' </div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="card">
                                             <div class="card-header" role="tab" id="headingSeven">
                                               <h5 class="mb-0">
@@ -209,7 +202,7 @@
                                               </div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="card">
                                             <div class="card-header" role="tab" id="headingEight">
                                               <h5 class="mb-0">
@@ -245,7 +238,7 @@
                                               </div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="card">
                                             <div class="card-header" role="tab" id="headingNine">
                                               <h5 class="mb-0">
@@ -275,5 +268,5 @@
                         </div>
                     </div>
                 </div>
-            </div>'	
+            </div>'
 ?>
