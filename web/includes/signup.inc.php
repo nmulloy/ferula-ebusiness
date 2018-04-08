@@ -1,8 +1,9 @@
 <?php
+	include_once 'dbh.inc.php';
+	session_start();
 	
 	if(isset($_POST['submit'])){
 		
-		include_once 'dbh.inc.php';
 		
 		$first = $_POST['first'];
 		$last = $_POST['last'];
@@ -33,13 +34,32 @@
 						header("Location: ../landing_page.php?signup=usertaken");
 						exit();
 					} else{
+						
+					
+						$_SESSION['u_email'] = $email;
+						
+						
 						//hashing the password
 						$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 						//echo "$first $last $email $uid $hashedPwd";
 						//insert the user into the database
 						$sqlConnect = "INSERT INTO users (user_first, user_last, user_email, user_pwd)
 						VALUES  ('$first', '$last', '$email', '$hashedPwd');";
+						
 						$result= mysqli_query($conn, $sqlConnect);
+						
+						$sql = "SELECT * FROM users WHERE user_email='$email' ";
+						$resultSession = mysqli_query($conn,$sql);
+						if($row = mysqli_fetch_assoc($resultSession)) {
+					
+								//login the user here
+								$_SESSION['u_id'] = $row['user_id'];
+								$_SESSION['u_first'] = $row['user_first'];
+								$_SESSION['u_last'] = $row['user_last'];
+								$_SESSION['u_email'] = $row['user_email'];
+								
+							}
+							
 							header("Location: ../med_form.php");
 							exit();
 					}	
