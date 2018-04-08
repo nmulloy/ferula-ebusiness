@@ -30,7 +30,7 @@
             </div>
             <div class="container">
                 <div class="content-center">
-                    <h1 class="title">F E R U L A</h1>
+                    <img class="img-responsive" src="./assets/img/ferula-orange.png" alt="FERULA">
                     <p id="subheader"><i>Health information for anyone, at anytime, anywhere.</i></p>
                 </div>
             </div>
