@@ -1,12 +1,12 @@
 <?php
 
 
-include 'dbh.inc.php';
+include_once ('dbh.inc.php');
 
 //GET logged-in user ID (Not sure how to do this)
 $senderID = $_SESSION['u_id'];
 //GET receiver user ID from email
-$email = $_POST['email']
+$email = $_POST['email'];
 $sql = "SELECT user_uid FROM users WHERE user_email= '$email'";
 $receiverID = mysqli_query($conn,$sql);
 
@@ -63,7 +63,7 @@ else {
   }
 }
 
-$sql = "INSERT INTO Shares (receiver, sender, shareall, personalinfo, emergcontact, docinfo,
+$sql = "INSERT INTO Shares (sender, receiver, shareall, personalinfo, emergcontact, docinfo,
   currentmed, presmedhist, chronicdisease, famdisease, pastmedhist, heartdiseaserisk)
   VALUES ('$receiverID', '$senderID', '$shareAll', '$personalInfo', '$emergContact', '$doctorInfo', '$currentMed', '$presMedHist', '$chronDisease', '$famDisease',
      '$pastMedHist', '$heartDiseaseRisk')";
@@ -80,3 +80,4 @@ mysqli_close($link);
 
 
  ?>
+
