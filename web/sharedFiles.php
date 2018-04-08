@@ -1,11 +1,12 @@
 <?php
 include 'includes/dbh.inc.php' ;
 $uID = $_SESSION['u_id'];
+$uID = 1;
 $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
-$sqlShared = "SELECT receiver FROM Shares WHERE sender = '$uID'";
+$sqlShared = "SELECT sender FROM Shares WHERE receiver = '$uID'";
 $result = mysqli_query($conn, $sqlShared);
 $row = mysqli_fetch_assoc($result);
-$fnameQuery = "SELECT user_first, user_last FROM users WHERE user_id = '$row[receiver]'";
+$fnameQuery = "SELECT user_first, user_last FROM users WHERE user_id = '$row[sender]'";
 $nameResult = mysqli_query($conn, $fnameQuery);
 ?>
 <!DOCTYPE html>
@@ -60,6 +61,8 @@ $nameResult = mysqli_query($conn, $fnameQuery);
   							<div > <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /></div>
   								<p> <td> <?php echo $rows['user_first'];  ?></td>
                   <td> <?php echo $rows['user_last']; ?></td> </p>
+                  <a class = "btn btn-primary" href = "sharedmyfiles.php?userfirst=$rows['user_first']&userlast=$rows=$rows['user_last']"
+                   role = "button" > View File </a>
   							</div>
                   <?php
                 }
