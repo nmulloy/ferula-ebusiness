@@ -1,6 +1,9 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
+=======
+>>>>>>> db4707a0236254e5db6658bdec876da7bb2d9877
 =======
 >>>>>>> db4707a0236254e5db6658bdec876da7bb2d9877
 	session_start();
