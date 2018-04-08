@@ -1,7 +1,7 @@
 <?php
 
 
-include_once ('dbh.inc.php');
+include_once ('includes/dbh.inc.php');
 
 //GET logged-in user ID (Not sure how to do this)
 $senderID = $_SESSION['u_id'];
@@ -27,8 +27,6 @@ if (isset($_POST['ShareAll']))
 
 }
 else {
-  if (isset($_POST['CustomShare']))
-  {
     if (isset($_POST['CustomSharePersonalInfo']))
     {
       $personalInfo = true;
@@ -60,7 +58,6 @@ else {
     {
       $heartDiseaseRisk = true;
     }
-  }
 }
 
 $sql = "INSERT INTO Shares (sender, receiver, shareall, personalinfo, emergcontact, docinfo,
@@ -69,15 +66,14 @@ $sql = "INSERT INTO Shares (sender, receiver, shareall, personalinfo, emergconta
      '$pastMedHist', '$heartDiseaseRisk')";
 
   if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
+    header("Location: MyFiles.php");
   } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    header("Location: ShareFile.php");
   }
 
 
-mysqli_close($link);
+mysqli_close($conn);
 
 
 
  ?>
-

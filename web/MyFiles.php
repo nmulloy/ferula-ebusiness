@@ -1,5 +1,5 @@
 <?php
-include('dbh.inc.php');
+include('includes/dbh.inc.php');
 $uID = $_SESSION['u_id'];
 $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
 $sqlShared = "SELECT receiver FROM Shares WHERE sender = '$uID'";
@@ -16,16 +16,16 @@ $nameResult = mysqli_query($conn, $fnameQuery);
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>MyFiles</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-    
+
 	<!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-	
+
     <!-- CSS Files -->
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/myfiles.css">
-   
+
 </head>
 
 <body class="landing-page sidebar-collapse">
@@ -34,7 +34,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
         include_once "navbar.php"; // this will include a.php
     ?>
 	<!-- End Navbar -->
-	
+
 	<div class="wrapper">
         <div class="section-nav" ><!-- creates a scetion, with a border as not to interfere with the nav-->
             <div class="container">
@@ -47,19 +47,19 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                     </div>
                 </div>
             </div>
-        	
+
             <div class="container" >
                 <div class="row">
                     <div class="col-md-12 ml-auto mr-auto ">
 						 <div class="separator separator-primary"></div>
 					</div>
-                    
+
                     <div id="personal" >
                         <div class="section-nav">
                             <div class = "container">
                                 <div class="row">
                                     <div id="accordion" role="tablist" aria-multiselectable="true">
-                                        
+
                                         <div class="card">
                                             <div class="card-header" role="tab" id="headingOne">
                                                 <h5 class="mb-0">
@@ -84,7 +84,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                                                 </div>
                                             </div>
                                         </div>
-                                          
+
                                         <div class="card">
                                             <div class="card-header" role="tab" id="headingTwo">
                                                 <h5 class="mb-0">
@@ -137,7 +137,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                                               <div class="card-block">
                                                 <P>Name of Medication : </P>
                                                 <P>Dosage and Frequency :</p>
-                                                
+
                                               </div>
                                             </div>
                                           </div>
@@ -166,7 +166,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                                               </div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="card">
                                             <div class="card-header" role="tab" id="headingSix">
                                               <h5 class="mb-0">
@@ -185,7 +185,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                                               </div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="card">
                                             <div class="card-header" role="tab" id="headingSeven">
                                               <h5 class="mb-0">
@@ -212,7 +212,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                                               </div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="card">
                                             <div class="card-header" role="tab" id="headingEight">
                                               <h5 class="mb-0">
@@ -243,7 +243,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                                               </div>
                                             </div>
                                           </div>
-                                          
+
                                           <div class="card">
                                             <div class="card-header" role="tab" id="headingNine">
                                               <h5 class="mb-0">
@@ -266,7 +266,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                                 </div>
                             </div>
                         </div><!-- end of personal files -->
-						
+
 						<div id = "shared" class = "text-center"> <!-- start of shared files-->
 						  <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
 						      <div> <img class = "img-fluid rounded-img" src="./assets/img/maryoconnell.png" /></div>
@@ -283,14 +283,16 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                 }
                   ?>
                   <div class= "add-file col-lg-2 col-md-4 col-xs-12 ml-auto mr-auto" >
-                    <div > <img class = "img-fluid rounded-img" src="./assets/img/add_people.jpg" /></div>
+                    <div > <a class = "img-fluid rounded-img" src="./assets/img/add_people.jpg"  href = "ShareFile.php">
                     <p> Add people </p>
+                  </a>
+                    </div>
                   </div>
 						</div><!-- end of shared files files -->
                     </div>
                 </div>
             </div>
-       
+
             <footer class="footer footer-default">
             <div class="container">
                 <nav>
@@ -305,7 +307,7 @@ $nameResult = mysqli_query($conn, $fnameQuery);
                                 Instagram
                             </a>
                         </li>
-                    
+
                     </ul>
                 </nav>
                 <div class="copyright">
@@ -349,4 +351,4 @@ $nameResult = mysqli_query($conn, $fnameQuery);
     }
 </script>
 
-</html>	
+</html>
