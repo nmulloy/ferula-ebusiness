@@ -2,12 +2,9 @@
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "localhost";
-
+$dbName = "loginsystem";
 $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
-
   header('Location: MyFiles.php');
-
 //personal info
 $fName = $_POST['firstname'];
 $lName = $_POST['lastname'];
@@ -23,21 +20,20 @@ $height = $_POST['height'];
 $weight = $_POST['weight'];
 $blood = $_POST['bloodType'];
 $consent = $_POST['yes_noConsent'];
-
-$query = "INSERT INTO userPersonalInfo (fName, lName, gender, address, city, county, country, contactNum, DOB, insurance, height, weight, blood, consent)
+$query = "INSERT INTO userpersonalinfo (fName, lName, gender, address, city, county, country, contactNum, DOB, insurance, height, weight, blood, consent)
   VALUES ('$fName', '$lName', '$gender', '$address', '$city', '$county',
   '$country', '$contactNum', '$dob', '$Insure', '$height', '$weight', '$blood', '$consent')";
   if (mysqli_query($conn, $query)) {
+  }
 //EmergContact
 $emergFname = $_POST['eFirstName'];
 $emergLname = $_POST['eLastName'];
 $emergTel = $_POST['eContactNumber'];
 $emergRel = $_POST['relationship'];
-
 $sql2 = "INSERT INTO emergcontact (fName, lName, number, relation)
  VALUES ('$emergFname', '$emergLname', '$emergTel', '$emergRel')";
  if (mysqli_query($conn,  $sql2)) {
-
+ }
 //doc information
 $gpFname = $_POST['gpFirstName'];
 $gpLname = $_POST['gpLastName'];
@@ -50,7 +46,7 @@ $sql3= "INSERT INTO docinfo (fName, lName, address, city, county, country, numbe
  VALUES ('$gpFname', '$gpLname', '$gpAddress', '$gpCity', '$gpCounty',
  '$gpCountry', '$gpNum')";
  if (mysqli_query($conn,  $sql3)) {
-
+ }
 //currentMed
 $currentMedName = $_POST['medication'];
 $medDose = $_POST['meddose'];
@@ -67,15 +63,11 @@ $heartProbs = $_POST['problemsHeart'];
 $neckBackInj = $_POST['neckBackInjuries'];
 $breatheProblems = $_POST['yes_noBreatheProblems'];
 $adhd = $_POST['yes_noADHD'];
-
 $sql4= "INSERT INTO currentmed (currentMeds, currentMedDose, healthConcerns, allergies, medAllergies, vision, glasses, hearing, speech,
   bloodPress, heartProbs, neckBackInj, breathProblems, adhd) VALUES ('$currentMedName', '$medDose', '$healthConcerns', '$allergies',
   '$medAllergies', '$vision', '$glasses', '$hearing', '$speech', '$bloodPress', '$heartProbs', '$neckBackInj',
 '$breatheProblems', '$adhd')";
 if (mysqli_query($conn, $sql4)) {
-
-}
-}
 }
 //Chronic Disease Assessment
 $asthma = $_POST['yes_noAsthma'];
@@ -106,14 +98,12 @@ $famGlaucome = $_POST['yes_noGlaucoma'];
 $famObesity = $_POST['yes_noObesity'];
 $famCancer = $_POST['yes_noLeukemia'];
 $famComments = $_POST['familyHistComments'];
-
 $sql6= "INSERT INTO famhistory (heartAttack, stroke, highBlood, cholesterol, diabetes, asthma, heartDisease, heartOps, glaucoma, obesity, cancer, comments)
  VALUES ('$heartAttack50', '$stroke50', '$highBlood', '$famCholesterol',
  '$famDiabetes', '$famAsthma', '$famHeartDiseases', '$famHeartOps',
 '$famGlaucome', '$famObesity', '$famCancer', '$famComments')";
 if (mysqli_query($conn, $sql6)) {
-
-
+}
 //pastMedHist
 $heartAttack = $_POST['yes_noRelheartAttack'];
 $rheumaticFever = $_POST['yes_no_rheaumaticFever'];
@@ -142,22 +132,14 @@ $sql7= "INSERT INTO pastmedhistory (heartAttack, rheumatic, murmer, arteries,
 '$anemia', '$thyroid', '$pneumonia', '$injuries', '$brokenBones')";
 if (mysqli_query($conn, $sql7)) {
 }
-}
-}
+
 //Heart Disease Risk Factors
 $smoking = $_POST['yes_nosmoking'];
 $smokePerDay = $_POST['smokingPerDay'];
 $timeSinceQuit = $_POST['timeSinceQuit'];
 $smokeAge = $_POST['ageOfSmoke'];
-
 $sql8= "INSERT INTO heartriskfacts (smoking, perDay, sinceQuit, age)
  VALUES ('$smoking', '$smokePerDay', '$timeSinceQuit', '$smokeAge')";
 if (mysqli_query($conn, $sql8)) {
 }
-
-
-
-
-
-
 ?>
