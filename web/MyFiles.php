@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>MyFiles</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-
+    
 	<!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
+	
     <!-- CSS Files -->
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/myfiles.css">
-
+   
 </head>
 
 <body class="landing-page sidebar-collapse">
@@ -25,24 +25,25 @@
         include_once "navbar.php"; // this will include a.php
     ?>
 	<!-- End Navbar -->
-
+	
 	<div class="wrapper">
         <div class="section-nav" ><!-- creates a scetion, with a border as not to interfere with the nav-->
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 ml-auto mr-auto text-center">
                         <button class="btn btn-primary btn-lg" id = "personal-button" >My File</button>
-						<a class="btn btn-primary btn-lg" href = "SharedFiles.php" = "shared-button"> Shared With Me </a>
+						<button class="btn btn-primary btn-lg" id = "shared-button"> Shared With Me </button>
                         <button class="btn btn-primary btn-lg" id = "isharing-button"> I Share With  </button>
-
+						<img class="img-responsive qr-code" src="./includes/qr/info.png" alt="QRCODE">
                     </div>
-                </div>
+                </div>		
             </div>
-
+        	
+			
             <?php
 			include_once "./includes/medInfo.inc.php"; // this will include a.php
 			?>
-
+       
             <footer class="footer footer-default">
             <div class="container">
                 <nav>
@@ -57,7 +58,7 @@
                                 Instagram
                             </a>
                         </li>
-
+                    
                     </ul>
                 </nav>
                 <div class="copyright">
@@ -101,4 +102,4 @@
     }
 </script>
 
-</html>
+</html>	

@@ -34,7 +34,7 @@
 						header("Location: ../landing_page.php?signup=usertaken");
 						exit();
 					} else{
-						
+					
 					
 						$_SESSION['u_email'] = $email;
 						

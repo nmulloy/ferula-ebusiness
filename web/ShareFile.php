@@ -32,12 +32,8 @@
           <h1>Share Your File </h1>
           <form action ="ShareFileProcess.php" method = "post"/>
           <div class = "form-group">
-            <label for = "email">Your Email Address </label>
+            <label for = "email"> Email Address </label>
             <input type = "Email" class = "form-control is-valid" name = "email" id = "email" required>
-          </div>
-          <div class = "form-group">
-            <label for = "email">Receiver Email Address </label>
-            <input type = "Email" class = "form-control is-valid" name = "Remail" id = "email" required>
           </div>
         </div>
         <div class = "col-lg-8 ml-auto mr-auto">
