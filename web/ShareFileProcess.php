@@ -1,20 +1,14 @@
 <?php
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "loginsystem";
 
-$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+
+include_once ('includes/dbh.inc.php');
+
 //GET logged-in user ID (Not sure how to do this)
-$email = $_POST['email'];
-$sql = "SELECT user_id FROM users WHERE user_email= '$email'";
-$senderID = mysqli_query($conn,$sql);
+$senderID = $_SESSION['u_id'];
 //GET receiver user ID from email
-$Remail = $_POST['Remail'];
-$sql = "SELECT user_id FROM users WHERE user_email= '$Remail'";
+$email = $_POST['email'];
+$sql = "SELECT user_uid FROM users WHERE user_email= '$email'";
 $receiverID = mysqli_query($conn,$sql);
-$sRow = mysqli_fetch_assoc($senderID);
-$rRow = mysqli_fetch_assoc($receiverID);
 
 //get checkvalues
 $shareAll = false;
@@ -66,16 +60,15 @@ else {
     }
 }
 
-$sql = "INSERT INTO shares (Sender, Receiver, ShareAll, PersonalInfo, EmergContact, DocInfo,
-  CurrentMed, PresMedHist, ChronicDisease, FamDisease, PastMedHist, HeartDiseaseRisk)
-  VALUES ('$sRow[user_id]', '$rRow[user_id]', '$shareAll', '$personalInfo', '$emergContact', '$doctorInfo', '$currentMed', '$presMedHist', '$chronDisease', '$famDisease',
+$sql = "INSERT INTO Shares (sender, receiver, shareall, personalinfo, emergcontact, docinfo,
+  currentmed, presmedhist, chronicdisease, famdisease, pastmedhist, heartdiseaserisk)
+  VALUES ('$receiverID', '$senderID', '$shareAll', '$personalInfo', '$emergContact', '$doctorInfo', '$currentMed', '$presMedHist', '$chronDisease', '$famDisease',
      '$pastMedHist', '$heartDiseaseRisk')";
 
   if (mysqli_query($conn, $sql)) {
-    echo $_SESSION['u_id'];
-    //header("Location: MyFiles.php");
+    header("Location: MyFiles.php");
   } else {
-  //  header("Location: ShareFile.php");
+    header("Location: ShareFile.php");
   }
 
 

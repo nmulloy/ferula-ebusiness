@@ -11,4 +11,10 @@
 	background-color: #fff8f4;
 }
 
+.qrCode{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 

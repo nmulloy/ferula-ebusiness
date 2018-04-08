@@ -6,7 +6,7 @@ $dbUsername = "root";
 $dbPassword = "";
 $dbName = "loginsystem";
 $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
-  header('Location: MyFiles.php');
+  header("Location: ./includes//qr/qrCodeMaker.php");;
 //personal info
 $fName = $_POST['firstname'];
 $lName = $_POST['lastname'];
@@ -36,7 +36,7 @@ $sql2 = "INSERT INTO emergcontact (fName, lName, number, relation)
  VALUES ('$emergFname', '$emergLname', '$emergTel', '$emergRel')";
  if (mysqli_query($conn,  $sql2)) {
  }
-//doc information
+ //doc information
 $gpFname = $_POST['gpFirstName'];
 $gpLname = $_POST['gpLastName'];
 $gpAddress = $_POST['gpAddress'];
